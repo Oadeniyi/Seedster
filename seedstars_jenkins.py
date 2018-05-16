@@ -5,7 +5,7 @@ from datetime import datetime,date
 
 
 #url = sys.argv[1]
-url = input('Please enter the URL here:')
+url = input('Please enter the JekinsURL here:')
 #usr = sys.argv[2]
 usr = input('Username:')
 #pwd = sys.argv[3]
@@ -55,8 +55,8 @@ def populate_target(jenkinsurl, user, pss):
 				conn.commit()
 				print('Job has no status')
 	
-
-populate_target(url, usr, pwd)
+if __name__ == '__main__':
+	populate_target(url, usr, pwd)
 # connt = sqlite3.connect('seedstars.db')
 # c = connt.cursor()
 # c.execute('select * from Jobs_status_time')
